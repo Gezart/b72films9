@@ -1,0 +1,32 @@
+.single-post{
+    .banner{
+        height: 400px;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .banner-content{
+            width: 70%;
+            margin: auto;
+            h1{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                margin: auto;
+            }
+        }
+    }
+    .post-content{
+        margin-bottom: 50px;
+        h2{
+            font-size: 28px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-top: 20px;
+        }
+        
+    }
+}

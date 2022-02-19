@@ -1,0 +1,35 @@
+.header{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    .header_wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu{
+       .main_menu{
+           display: flex;
+            li{
+                margin-left: 20px;
+                position: relative; 
+                cursor: pointer;
+                display: flex;
+                align-items: flex-end;
+                @media (max-width: 1199.98px){
+                    margin-left: 15px;
+                }
+                a{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 14.62px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+       }
+    }
+}

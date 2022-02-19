@@ -1,0 +1,6 @@
+.certificates{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+    grid-gap: 20px;
+}
