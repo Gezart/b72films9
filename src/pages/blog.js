@@ -6,12 +6,11 @@ import { graphql } from 'gatsby'
 import Banner from '../components/Banner'
 
 const Blog = ({data}) => {
-    console.log("All posts:", data.allWpPost)
     const blog = data.wpPage;
     return (
         <>
             <Header />
-            <Banner title={blog.banner.banner.title} content={blog.banner.banner.content} background={blog.banner.banner.background}></Banner>
+            <Banner banner={blog.banner.banner}></Banner>
             <Container>
                 <AllBlog posts={data.allWpPost.nodes} />
             </Container>   
@@ -30,7 +29,11 @@ query MyQuery {
         title
         featuredImage {
           node {
-            mediaItemUrl
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              }
+            }
           }
         }
         content
@@ -43,7 +46,11 @@ query MyQuery {
           title
           content
           background {
-            mediaItemUrl
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              }
+            }
           }
         }
       }

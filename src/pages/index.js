@@ -14,7 +14,7 @@ export default function Home({data}) {
   return (
     <>
 		<Header />
-		<Banner title={home.banner.banner.title} content={home.banner.banner.content} background={home.banner.banner.background}></Banner>
+		<Banner banner={home.banner.banner}></Banner>
 		<AboutUs aboutUs= {home.aboutUs}/>
 		<Counter counter={home.counter} />
 		<Trailers trailers={home.trailers.trailers}/>
@@ -31,7 +31,11 @@ query Home {
 		  title
 		  content
 		  background {
-			mediaItemUrl
+			localFile {
+			  childImageSharp {
+				gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+			  }
+			}
 		  }
 		}
 	  }
@@ -45,7 +49,7 @@ query Home {
       image {
         localFile {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           }
         }
       }

@@ -10,11 +10,7 @@ const Certificates = ({certificates}) => {
                 {
                     certificates.map((certificate, index, image) =>{
                         <div key={index} className={`certificate certificate-${index}`}>
-                            {image = getImage(certificate.image.localFile)
-                            }
-                            {console.log(image)}
-                        {/* <img src={certificate.image ? certificate.image.mediaItemUrl: ''} /> */}
-                        <GatsbyImage image={image} alt={`certificate-${index}`} />
+                        <GatsbyImage image={getImage(certificate.image.localFile)} alt={`certificate-${index}`} />
                     </div>
                     }
                     )

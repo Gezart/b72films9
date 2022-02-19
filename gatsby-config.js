@@ -11,9 +11,9 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: process.env.WPGRAPHQL_URL || `http://b72films9.com/graphql`,
-        baseUrl: `localhost:8000/`, // site url without http/https
+        baseUrl: `b72films9.com/`, // site url without http/https
         protocol: `http`,
-        hostingWPCOM: false,
+        hostingWPCOM: true,
         useACF: true,
       },
     },

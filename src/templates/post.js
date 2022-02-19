@@ -14,7 +14,11 @@ const Post = ({ pageContext: { post }}) => {
             title
             content
             background {
-              mediaItemUrl
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                }
+              }
             }
           }
         }
@@ -29,7 +33,7 @@ const Post = ({ pageContext: { post }}) => {
 	return (
 		<div className="single-post">
 			<Header />
-			<Banner title={blogOptions.title} content={blogOptions.content} background={blogOptions.background}></Banner>
+			<Banner banner={blogOptions}></Banner>
 			<div className="container">
         <div className="post-content">
           <h2>{post.title}</h2>

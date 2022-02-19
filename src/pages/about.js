@@ -12,7 +12,7 @@ const About = ({data}) => {
     return (
         <>
             <Header />
-            <Banner title={about.banner.banner.title} content={about.banner.banner.content} background={about.banner.banner.background}></Banner>
+            <Banner banner={about.banner.banner}></Banner>
             <AboutUs  aboutUs= {about.aboutUs}/>
             <Certificates certificates={about.certificates.certificates} />
             <Services services={about.services}/>
@@ -32,7 +32,11 @@ export const data = graphql`
           title
           content
           background {
-            mediaItemUrl
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              }
+            }
           }
         }
       }
@@ -46,7 +50,7 @@ export const data = graphql`
         image {
           localFile {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
         }
@@ -56,7 +60,7 @@ export const data = graphql`
           image {
             localFile {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
           }
@@ -77,7 +81,11 @@ export const data = graphql`
           name
           jobPosition
           image {
-            mediaItemUrl
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+              }
+            }
           }
         }
       }
