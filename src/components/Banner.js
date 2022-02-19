@@ -11,6 +11,7 @@ const Banner = ({title, background, content}) => {
                             {/* <h2>Category Film</h2> */}
                             <h1>{title}</h1>
                             <p className='content'>{content}</p>
+                            gg
                         </div>
                     </div>
                 </Container>
