@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const { allWpPost } = wpData.data
 	allWpPost.nodes.forEach( post => {
 		createPage({
-			path: `blog/${post.slug}`,
+			path: `${post.slug}`,
 			component: require.resolve(`./src/templates/post.js`),
 			context: { post },
 		})
