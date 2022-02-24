@@ -1,13 +1,22 @@
 .team{
     margin-top: 80px;
+    @media (max-width: 991px){
+        margin-top: 50px;
+    }
     .section-header{
         @include section-header;
         margin-bottom: 50px;
+        @media (max-width: 991px){
+            margin-bottom: 20px;
+        }
     }
     .team-members{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        @media (max-width: 767px){
+            grid-template-columns: 1fr;
+        }
         .member{
             .member-content{
                 padding: 20px;

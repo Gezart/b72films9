@@ -4,6 +4,7 @@ import Container from '../components/Container/Container'
 import Header from '../components/Header'
 import { graphql } from 'gatsby'
 import Banner from '../components/Banner'
+import Footer from '../components/Footer'
 
 const Blog = ({data}) => {
     const blog = data.wpPage;
@@ -14,6 +15,7 @@ const Blog = ({data}) => {
             <Container>
                 <AllBlog posts={data.allWpPost.nodes} />
             </Container>   
+            <Footer />
         </>
     )
 }

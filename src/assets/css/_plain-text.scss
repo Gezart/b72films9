@@ -2,7 +2,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 100px;
+    @media (max-width: 991px){
+        grid-template-columns: 1fr;
+    }
     .content{
+        @media (max-width: 991px){
+            order: 2;
+        }
         padding-right: 20px;
         display: flex;
         justify-content: center;
@@ -12,6 +18,10 @@
             font-size: 28px;
             font-weight: 500;
             margin-bottom: 20px;
+            @media (max-width: 991px){
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
         }
         p{
             color: #606060;
@@ -24,6 +34,10 @@
     }
     .image{
         position: relative;
+        @media (max-width: 991px){
+            order: 1;
+            margin-bottom: 30px;
+        }
         img{
             width: 100%;
             height: auto;

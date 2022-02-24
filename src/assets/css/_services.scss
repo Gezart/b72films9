@@ -2,20 +2,34 @@
     background-color: #FFEBEB;
     padding: 100px 0;
     margin-top: 80px;
+    @media (max-width: 991px){
+        padding: 50px 0;
+        margin-top: 50px;
+    }
     .section-header{
         @include section-header;
         margin-bottom: 50px;
+        @media (max-width: 991px){
+            margin-bottom: 20px;
+        }
     }
     .our-services{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        @media (max-width: 767px){
+            grid-template-columns: 1fr;
+        }
         .service{
             padding-right: 50px;
             h3{
                 font-size: 20px;
                 line-height: 36px;
                 margin-bottom: 15px;
+                @media (max-width: 991px){
+                    font-size: 18px;
+                    line-height: 24px;
+                }
             }
             p{
                 font-size: 16px;

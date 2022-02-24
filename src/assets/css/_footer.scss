@@ -1,0 +1,29 @@
+.footer{
+    background-color: #140000;
+    padding: 50px 0;
+    @media (min-width: 991px){
+        padding: 100px 0;
+    }
+    .footer-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        @media (min-width: 991px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .footer-column{
+            h3{
+                font-size: 20px;
+                color: #fff;
+                margin-bottom: 30px;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

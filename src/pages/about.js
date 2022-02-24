@@ -6,6 +6,7 @@ import AboutUs from '../components/AboutUs/AboutUs';
 import Certificates from '../components/Certificates';
 import Services from '../components/Services';
 import Team from '../components/Team';
+import Footer from '../components/Footer';
 
 const About = ({data}) => {
     const about = data.wpPage;
@@ -17,6 +18,7 @@ const About = ({data}) => {
             <Certificates certificates={about.certificates.certificates} />
             <Services services={about.services}/>
             <Team team={about.team}/>
+            <Footer />
         </>
     )
 }

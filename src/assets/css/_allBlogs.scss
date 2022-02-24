@@ -3,11 +3,22 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 100px;
     grid-gap: 30px;
+    @media (max-width: 991px){
+        grid-template-columns: 1fr;
+    }
     .blog-content{
         padding: 20px;
+        @media (max-width: 991px){
+            padding:20px 0;
+        }
         h1{
             font-size: 22px;
             line-height: 40px;
+            @media (max-width: 991px){
+                font-size: 20px;
+                line-height: normal;
+                margin-bottom: 15px;
+            }
         }  
         p{
             font-size: 16px;

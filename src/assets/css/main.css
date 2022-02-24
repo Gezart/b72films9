@@ -267,11 +267,24 @@ a {
   margin-bottom: 10px;
 }
 
+@media (max-width: 991px) {
+  .banner h1 {
+    font-size: 24px;
+  }
+}
+
 .banner .content {
   color: #fff;
   width: 60%;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  .banner .content {
+    width: 90%;
+    font-size: 16px;
+  }
 }
 
 .banner button {
@@ -293,6 +306,13 @@ a {
   margin-top: 100px;
 }
 
+@media (max-width: 991px) {
+  .plain-text {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .plain-text .content {
   padding-right: 20px;
   display: -webkit-box;
@@ -310,10 +330,25 @@ a {
           align-items: flex-start;
 }
 
+@media (max-width: 991px) {
+  .plain-text .content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .plain-text .content h2 {
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  .plain-text .content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 }
 
 .plain-text .content p {
@@ -337,6 +372,15 @@ a {
   position: relative;
 }
 
+@media (max-width: 991px) {
+  .plain-text .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 30px;
+  }
+}
+
 .plain-text .image img {
   width: 100%;
   height: auto;
@@ -350,6 +394,13 @@ a {
   background-position: bottom;
   margin-top: 100px;
   position: relative;
+}
+
+@media (max-width: 991px) {
+  .counter {
+    height: unset;
+    padding: 20px 0;
+  }
 }
 
 .counter::after {
@@ -373,6 +424,13 @@ a {
   height: 100%;
 }
 
+@media (max-width: 991px) {
+  .counter .counter-wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .counter .counter-wrapper .counter-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,15 +447,35 @@ a {
           justify-content: center;
 }
 
+@media (max-width: 991px) {
+  .counter .counter-wrapper .counter-item {
+    padding: 20px 0;
+  }
+}
+
 .counter .counter-wrapper .counter-item .number {
   font-size: 40px;
   color: #fff;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .counter .counter-wrapper .counter-item .number {
+    font-size: 20px;
+  }
 }
 
 .counter .counter-wrapper .counter-item .name {
-  font-size: 24px;
+  font-size: 22px;
+  text-align: center;
   color: #fff;
   text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .counter .counter-wrapper .counter-item .name {
+    font-size: 16px;
+  }
 }
 
 .trailers {
@@ -410,14 +488,34 @@ a {
   margin-bottom: 100px;
 }
 
+@media (max-width: 991px) {
+  .trailers {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .trailers .trailer video {
   height: 230px;
+}
+
+@media (max-width: 991px) {
+  .trailers .trailer video {
+    height: auto;
+  }
 }
 
 .services {
   background-color: #FFEBEB;
   padding: 100px 0;
   margin-top: 80px;
+}
+
+@media (max-width: 991px) {
+  .services {
+    padding: 50px 0;
+    margin-top: 50px;
+  }
 }
 
 .services .section-header {
@@ -447,12 +545,33 @@ a {
   line-height: 58px;
 }
 
+@media (max-width: 991px) {
+  .services .section-header h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services .section-header {
+    margin-bottom: 20px;
+  }
+}
+
 .services .our-services {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .services .our-services {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .services .our-services .service {
@@ -463,6 +582,13 @@ a {
   font-size: 20px;
   line-height: 36px;
   margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .services .our-services .service h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .services .our-services .service p {
@@ -481,6 +607,12 @@ a {
 
 .team {
   margin-top: 80px;
+}
+
+@media (max-width: 991px) {
+  .team {
+    margin-top: 50px;
+  }
 }
 
 .team .section-header {
@@ -510,12 +642,33 @@ a {
   line-height: 58px;
 }
 
+@media (max-width: 991px) {
+  .team .section-header h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .team .section-header {
+    margin-bottom: 20px;
+  }
+}
+
 .team .team-members {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .team .team-members {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .team .team-members .member .member-content {
@@ -541,13 +694,34 @@ a {
   grid-gap: 30px;
 }
 
+@media (max-width: 991px) {
+  .blogs {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .blogs .blog-content {
   padding: 20px;
+}
+
+@media (max-width: 991px) {
+  .blogs .blog-content {
+    padding: 20px 0;
+  }
 }
 
 .blogs .blog-content h1 {
   font-size: 22px;
   line-height: 40px;
+}
+
+@media (max-width: 991px) {
+  .blogs .blog-content h1 {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
 }
 
 .blogs .blog-content p {
@@ -595,5 +769,51 @@ a {
 
 .single-post .post-content p {
   margin-top: 20px;
+}
+
+.footer {
+  background-color: #140000;
+  padding: 50px 0;
+}
+
+@media (min-width: 991px) {
+  .footer {
+    padding: 100px 0;
+  }
+}
+
+.footer .footer-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 991px) {
+  .footer .footer-wrapper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer .footer-wrapper .footer-column h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.footer .footer-wrapper .footer-column div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.footer .footer-wrapper .footer-column div a {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

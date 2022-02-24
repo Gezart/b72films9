@@ -7,6 +7,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Counter from "../components/Counter";
 import Trailers from "../components/Trailers";
 import '../assets/css/main.css';
+import Footer from "../components/Footer";
 
 export default function Home({data}) {
   console.log(data); 	
@@ -18,6 +19,7 @@ export default function Home({data}) {
 		<AboutUs aboutUs= {home.aboutUs}/>
 		<Counter counter={home.counter} />
 		<Trailers trailers={home.trailers.trailers}/>
+		<Footer />
     </>
   );
 }
@@ -70,6 +72,11 @@ query Home {
 		  }
 		  poster {
 			mediaItemUrl
+			localFile {
+				childImageSharp {
+				  gatsbyImageData(placeholder: BLURRED)
+				}
+			  }
 		  }
 		}
 	  }
