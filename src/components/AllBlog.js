@@ -3,7 +3,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react'
 
 const AllBlog = ({posts}) => {
-    const url = 'http://localhost:8000';
     return (
         <div className='blogs'>
             {posts.map((post, index) =>
@@ -13,7 +12,7 @@ const AllBlog = ({posts}) => {
                         <GatsbyImage image={getImage(post.featuredImage.node.localFile)} alt="post-image"/>
                     </div>
                    <div className="blog-content">
-                        <Link to={url + "/blog/" + post.slug}><h1>{post.title}</h1></Link>
+                        <Link to={"/blog/" + post.slug}><h1>{post.title}</h1></Link>
                         <p>{post.content}</p>
                    </div>
                 </div>
