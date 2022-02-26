@@ -38,7 +38,7 @@ const Post = ({ pageContext: { post }}) => {
 			<Container>
         <div className="post-content">
           <h2>{post.title}</h2>
-          <img src={post.featuredImage ? post.featuredImage.node.mediaItemUrl: ''} alt="" />
+          <GatsbyImage image={getImage(post.background.localFile)} alt="post-image"/>
           <p>{post.content}</p>
         </div>
       </Container>
