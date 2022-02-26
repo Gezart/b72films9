@@ -13,6 +13,7 @@ const AllBlog = ({posts}) => {
                     </div>
                    <div className="blog-content">
                         <Link to={"/blog/" + post.slug}><h1>{post.title}</h1></Link>
+                        {/* <Link to={post.slug}><h1>{post.title}</h1></Link> */}
                         <p>{post.content}</p>
                    </div>
                 </div>

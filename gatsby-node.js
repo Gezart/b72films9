@@ -31,4 +31,14 @@ exports.createPages = async ({ graphql, actions }) => {
 			context: { post },
 		})
 	})
+
+	// const { allWpPage } = wpData.data
+	// allWpPage.nodes.forEach( page => {
+	// 	createPage({
+	// 		path: `/${page.slug}`,
+	// 		component: require.resolve(`./src/templates/page.js`),
+	// 		context: { page },
+	// 	})
+	// })
+  
 }
