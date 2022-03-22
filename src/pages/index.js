@@ -1,85 +1,27 @@
-import React from "react"
-import Header from "../components/Header";
-import '../global.module.scss'
-import { graphql } from "gatsby";
-import Banner from "../components/Banner";
-import AboutUs from "../components/AboutUs/AboutUs";
-import Counter from "../components/Counter";
-import Trailers from "../components/Trailers";
-import '../assets/css/main.css';
-import Footer from "../components/Footer";
+import React from 'react'
 
-export default function Home({data}) {
-  console.log(data); 	
-  const home = data.wpPage;
+const Home = () => {
   return (
     <>
-		<Header />
-		<Banner banner={home.banner.banner}></Banner>
-		<AboutUs aboutUs= {home.aboutUs}/>
-		<Counter counter={home.counter} />
-		<Trailers trailers={home.trailers.trailers}/>
-		<Footer />
+        <form method="post" action="http://b72films9.com/wp-json/wp/v2/users">
+		<label>
+			Username
+			<input type="text" name="name" />
+		</label>
+		<label>
+			Email
+			<input type="email" name="email" />
+		</label>
+		<label>
+			Password
+			<input type="password" name="password" />
+		</label>
+		<label>
+			<input type="submit" name="submit" />
+		</label>
+		</form>
     </>
-  );
+  )
 }
-export const data = graphql `
-query Home {
-	wpPage(slug: {eq: "home"}) {
-	  title
-	  slug
-	  banner {
-		banner {
-		  title
-		  content
-		  background {
-			localFile {
-			  childImageSharp {
-				gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-			  }
-			}
-		  }
-		}
-	  }
-	  aboutUs {
-		title
-		content
-		buttonText
-		buttonLink {
-		  url
-		}
-      image {
-        localFile {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-          }
-        }
-      }
-	  }
-	  counter {
-		counter {
-		  number
-		  text
-		}
-		counterBackground {
-		  mediaItemUrl
-		}
-	  }
-	  trailers {
-		trailers {
-		  videohome {
-			mediaItemUrl
-		  }
-		  poster {
-			mediaItemUrl
-			localFile {
-				childImageSharp {
-				  gatsbyImageData(placeholder: BLURRED)
-				}
-			  }
-		  }
-		}
-	  }
-	}
-  }
-`
+
+export default Home
